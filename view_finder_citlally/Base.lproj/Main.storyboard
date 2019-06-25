@@ -67,7 +67,7 @@
         <!--Add New Photo-->
         <scene sceneID="whd-Mx-26R">
             <objects>
-                <viewController id="e06-7b-yDe" sceneMemberID="viewController">
+                <viewController id="e06-7b-yDe" customClass="AddPhotoViewController" customModule="view_finder_citlally" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qki-5x-Lli">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,14 +78,17 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lkx-VQ-Nm1">
                                 <rect key="frame" x="53" y="436" width="54" height="30"/>
                                 <state key="normal" title="Camera"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOv-xd-u3P">
-                                <rect key="frame" x="141" y="436" width="92" height="30"/>
-                                <state key="normal" title="Photo Library"/>
+                                <connections>
+                                    <action selector="camera:" destination="e06-7b-yDe" eventType="touchUpInside" id="cKt-Nw-jeU"/>
+                                    <action selector="takePhoto:" destination="e06-7b-yDe" eventType="touchUpInside" id="j27-cs-msj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEh-ub-beN">
-                                <rect key="frame" x="259" y="436" width="52" height="30"/>
-                                <state key="normal" title="Albums"/>
+                                <rect key="frame" x="219" y="436" width="92" height="30"/>
+                                <state key="normal" title="Photo Library"/>
+                                <connections>
+                                    <action selector="findPhoto:" destination="e06-7b-yDe" eventType="touchUpInside" id="jHw-c2-JzU"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bgx-5W-qaa">
                                 <rect key="frame" x="139" y="334" width="97" height="30"/>
@@ -96,32 +99,34 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBH-MA-ZhC">
                                 <rect key="frame" x="170" y="384" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="savePhoto:" destination="e06-7b-yDe" eventType="touchUpInside" id="N28-B0-TLa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dOv-xd-u3P" firstAttribute="leading" secondItem="Lkx-VQ-Nm1" secondAttribute="trailing" constant="34" id="3S4-qU-z0K"/>
                             <constraint firstItem="Joh-Xw-srn" firstAttribute="trailing" secondItem="z2F-ql-fq6" secondAttribute="trailing" constant="46" id="C7x-zU-mVQ"/>
-                            <constraint firstItem="YEh-ub-beN" firstAttribute="leading" secondItem="dOv-xd-u3P" secondAttribute="trailing" constant="26" id="FqP-c6-JDq"/>
                             <constraint firstItem="YEh-ub-beN" firstAttribute="top" secondItem="QBH-MA-ZhC" secondAttribute="bottom" constant="22" id="KM0-BB-t6e"/>
                             <constraint firstItem="Joh-Xw-srn" firstAttribute="trailing" secondItem="QBH-MA-ZhC" secondAttribute="trailing" constant="171" id="No2-ri-gW4"/>
                             <constraint firstItem="QBH-MA-ZhC" firstAttribute="top" secondItem="bgx-5W-qaa" secondAttribute="bottom" constant="20" id="NwR-eq-Pc8"/>
                             <constraint firstItem="bgx-5W-qaa" firstAttribute="leading" secondItem="Joh-Xw-srn" secondAttribute="leading" constant="139" id="PvF-vQ-IJb"/>
                             <constraint firstItem="Joh-Xw-srn" firstAttribute="trailing" secondItem="YEh-ub-beN" secondAttribute="trailing" constant="64" id="RON-RJ-Q2J"/>
-                            <constraint firstItem="dOv-xd-u3P" firstAttribute="top" secondItem="QBH-MA-ZhC" secondAttribute="bottom" constant="22" id="SIC-mI-nXb"/>
                             <constraint firstItem="Joh-Xw-srn" firstAttribute="trailing" secondItem="bgx-5W-qaa" secondAttribute="trailing" constant="139" id="Ty8-NA-c87"/>
-                            <constraint firstItem="dOv-xd-u3P" firstAttribute="leading" secondItem="Lkx-VQ-Nm1" secondAttribute="trailing" constant="34" id="W9z-59-X1W"/>
                             <constraint firstItem="Lkx-VQ-Nm1" firstAttribute="leading" secondItem="Joh-Xw-srn" secondAttribute="leading" constant="53" id="WJl-iq-kqx"/>
                             <constraint firstItem="QBH-MA-ZhC" firstAttribute="leading" secondItem="Joh-Xw-srn" secondAttribute="leading" constant="170" id="eHy-bc-px3"/>
                             <constraint firstItem="bgx-5W-qaa" firstAttribute="top" secondItem="z2F-ql-fq6" secondAttribute="bottom" constant="103" id="lnj-mO-hia"/>
                             <constraint firstItem="z2F-ql-fq6" firstAttribute="leading" secondItem="Joh-Xw-srn" secondAttribute="leading" constant="46" id="qu6-dL-5ik"/>
                             <constraint firstItem="z2F-ql-fq6" firstAttribute="top" secondItem="Joh-Xw-srn" secondAttribute="top" constant="47" id="t23-dO-Yc9"/>
-                            <constraint firstItem="YEh-ub-beN" firstAttribute="leading" secondItem="dOv-xd-u3P" secondAttribute="trailing" constant="26" id="tc7-dU-lXZ"/>
                             <constraint firstItem="Lkx-VQ-Nm1" firstAttribute="top" secondItem="QBH-MA-ZhC" secondAttribute="bottom" constant="22" id="zKh-tP-ZpQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Joh-Xw-srn"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Photo" id="cZM-iH-KmO"/>
+                    <connections>
+                        <outlet property="camera" destination="z2F-ql-fq6" id="iXp-7t-yQp"/>
+                        <outlet property="caption" destination="bgx-5W-qaa" id="Y8O-VS-Vci"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nzY-Hq-B0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
