@@ -72,27 +72,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lkx-VQ-Nm1">
-                                <rect key="frame" x="55" y="395" width="54" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera_icon" translatesAutoresizingMaskIntoConstraints="NO" id="z2F-ql-fq6">
+                                <rect key="frame" x="46" y="111" width="283" height="120"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lkx-VQ-Nm1">
+                                <rect key="frame" x="53" y="436" width="54" height="30"/>
                                 <state key="normal" title="Camera"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOv-xd-u3P">
-                                <rect key="frame" x="141" y="395" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOv-xd-u3P">
+                                <rect key="frame" x="141" y="387" width="92" height="30"/>
                                 <state key="normal" title="Photo Library"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEh-ub-beN">
-                                <rect key="frame" x="258" y="395" width="52" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEh-ub-beN">
+                                <rect key="frame" x="259" y="436" width="52" height="30"/>
                                 <state key="normal" title="Albums"/>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera_icon" translatesAutoresizingMaskIntoConstraints="NO" id="z2F-ql-fq6">
-                                <rect key="frame" x="46" y="161" width="283" height="169"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bgx-5W-qaa">
+                                <rect key="frame" x="139" y="285" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBH-MA-ZhC">
+                                <rect key="frame" x="170" y="335" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Joh-Xw-srn" firstAttribute="trailing" secondItem="bgx-5W-qaa" secondAttribute="trailing" constant="139" id="0It-Xg-5bh"/>
+                            <constraint firstItem="Joh-Xw-srn" firstAttribute="trailing" secondItem="z2F-ql-fq6" secondAttribute="trailing" constant="46" id="0du-0G-N1N"/>
+                            <constraint firstItem="z2F-ql-fq6" firstAttribute="leading" secondItem="Joh-Xw-srn" secondAttribute="leading" constant="46" id="D3r-gd-S1U"/>
+                            <constraint firstItem="bgx-5W-qaa" firstAttribute="leading" secondItem="Joh-Xw-srn" secondAttribute="leading" constant="139" id="EXL-2y-Ycw"/>
+                            <constraint firstItem="dOv-xd-u3P" firstAttribute="top" secondItem="QBH-MA-ZhC" secondAttribute="bottom" constant="22" id="K1O-KW-ubI"/>
+                            <constraint firstItem="QBH-MA-ZhC" firstAttribute="leading" secondItem="Joh-Xw-srn" secondAttribute="leading" constant="170" id="KS2-gJ-W35"/>
+                            <constraint firstItem="dOv-xd-u3P" firstAttribute="leading" secondItem="Lkx-VQ-Nm1" secondAttribute="trailing" constant="34" id="Qi9-yF-XVO"/>
+                            <constraint firstItem="dOv-xd-u3P" firstAttribute="leading" secondItem="Lkx-VQ-Nm1" secondAttribute="trailing" constant="34" id="Wcy-WB-Rvi"/>
+                            <constraint firstItem="bgx-5W-qaa" firstAttribute="top" secondItem="z2F-ql-fq6" secondAttribute="bottom" constant="54" id="e62-XR-6aF"/>
+                            <constraint firstItem="Lkx-VQ-Nm1" firstAttribute="leading" secondItem="Joh-Xw-srn" secondAttribute="leading" constant="53" id="ech-AT-0iJ"/>
+                            <constraint firstItem="z2F-ql-fq6" firstAttribute="top" secondItem="Joh-Xw-srn" secondAttribute="top" constant="47" id="oS9-0q-rAM"/>
+                            <constraint firstItem="QBH-MA-ZhC" firstAttribute="top" secondItem="bgx-5W-qaa" secondAttribute="bottom" constant="20" id="tIW-9h-cOk"/>
+                            <constraint firstItem="Joh-Xw-srn" firstAttribute="trailing" secondItem="QBH-MA-ZhC" secondAttribute="trailing" constant="171" id="ubR-g9-xeJ"/>
+                            <constraint firstItem="YEh-ub-beN" firstAttribute="leading" secondItem="dOv-xd-u3P" secondAttribute="trailing" constant="26" id="zw6-cF-lfs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Joh-Xw-srn"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Photo" id="cZM-iH-KmO"/>
